@@ -52,18 +52,19 @@
     .btn {
       display: block;
       width: 100%;
-      margin: 0.5rem 0;
-      padding: 1rem;
+      margin: 1rem 0;
+      padding: 1.2rem;
       font-size: 1rem;
       background-color: #f3f3f3;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       text-align: center;
+      font-family: 'Paperlogy', sans-serif;
     }
     .swiper {
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       height: auto;
       margin-bottom: 1rem;
     }
@@ -71,6 +72,10 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
     }
     .iframe-container {
       width: 100%;
@@ -86,6 +91,7 @@
     .back-btn {
       margin-top: 1rem;
       background-color: #dbeafe;
+      font-family: 'Paperlogy', sans-serif;
     }
   </style>
 </head>
@@ -101,7 +107,7 @@
     </div>
   </div>
 
-  <!-- 슬라이드 화면 -->
+  <!-- 슬라이드 화면들 -->
   <div class="screen" id="slide1">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -112,16 +118,12 @@
         <div class="swiper-slide"><img src="내 삶의 지혜를 나누는 콘텐츠 5.png"></div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
     <div class="iframe-container">
       <iframe src="https://noteforms.com/forms/1-x6enh2" title="의견 남기기"></iframe>
     </div>
     <button class="btn back-btn" onclick="goHome()">← 다른 카드뉴스 보기</button>
   </div>
-
-  <!-- 동일한 구성 slide2~slide4 (복제본) -->
   <div class="screen" id="slide2">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -132,15 +134,12 @@
         <div class="swiper-slide"><img src="내 삶의 지혜를 나누는 콘텐츠 5.png"></div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
     <div class="iframe-container">
       <iframe src="https://noteforms.com/forms/1-x6enh2" title="의견 남기기"></iframe>
     </div>
     <button class="btn back-btn" onclick="goHome()">← 다른 카드뉴스 보기</button>
   </div>
-
   <div class="screen" id="slide3">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -151,15 +150,12 @@
         <div class="swiper-slide"><img src="내 삶의 지혜를 나누는 콘텐츠 5.png"></div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
     <div class="iframe-container">
       <iframe src="https://noteforms.com/forms/1-x6enh2" title="의견 남기기"></iframe>
     </div>
     <button class="btn back-btn" onclick="goHome()">← 다른 카드뉴스 보기</button>
   </div>
-
   <div class="screen" id="slide4">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -170,8 +166,6 @@
         <div class="swiper-slide"><img src="내 삶의 지혜를 나누는 콘텐츠 5.png"></div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
     <div class="iframe-container">
       <iframe src="https://noteforms.com/forms/1-x6enh2" title="의견 남기기"></iframe>
@@ -187,10 +181,6 @@
       new Swiper(`#slide${index} .swiper`, {
         loop: true,
         pagination: { el: '.swiper-pagination' },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
       });
     }
     function goHome() {
