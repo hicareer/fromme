@@ -21,55 +21,60 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      background-image: url('메인 배경.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.95);
+      background-blend-mode: lighten;
     }
     .active {
       display: flex;
     }
     .home {
-      background-image: url('메인 배경.png');
-      background-size: cover;
-      background-position: center;
       height: 100vh;
       justify-content: flex-start;
     }
     .overlay {
       background-color: rgba(255, 255, 255, 0.9);
-      margin-top: 10%;
-      padding: 1.5rem;
+      margin-top: 5%;
+      padding: 2rem;
       border-radius: 12px;
       text-align: center;
       width: 90%;
     }
     h1, h2, h3 {
       font-family: 'Paperlogy', sans-serif;
-      margin: 0.5rem 0;
+      margin: 0.8rem 0;
     }
     .intro-text {
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       line-height: 1.4;
     }
     h1 {
       font-size: 1.6rem;
+      margin-top: 1.5rem;
     }
     h2 {
       font-size: 1.2rem;
       font-weight: normal;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
     .btn {
       display: block;
       width: 100%;
-      margin: 1.2rem 0;
+      margin: 1.5rem 0;
       padding: 1.2rem;
       font-size: 1rem;
-      background-color: #e6f4ea;
+      background-color: #2e7d32;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       text-align: center;
       font-family: 'Paperlogy', sans-serif;
-      line-height: 1.4;
+      line-height: 1.5;
       white-space: pre-line;
+      color: white;
     }
     .swiper {
       width: 100%;
@@ -86,13 +91,17 @@
     .swiper-button-prev {
       display: none;
     }
+    .swiper-pagination {
+      margin-top: 10px;
+      position: relative !important;
+    }
     .swiper-pagination-bullet-active {
-      background-color: #4CAF50 !important;
+      background-color: #2e7d32 !important;
     }
     .iframe-container {
       width: 100%;
       max-width: 100%;
-      height: 480px;
+      height: 320px;
       margin-bottom: 1rem;
     }
     iframe {
@@ -102,14 +111,17 @@
     }
     .back-btn {
       margin-top: 1rem;
-      background-color: #d7f0d7;
+      background-color: #1b5e20;
       font-family: 'Paperlogy', sans-serif;
+      color: white;
     }
     .slide-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      font-weight: bold;
       margin-bottom: 1rem;
       font-family: 'Paperlogy', sans-serif;
       text-align: center;
+      color: #1b1b1b;
     }
   </style>
 </head>
@@ -118,14 +130,19 @@
     <div class="overlay">
       <div class="intro-text">
         울산 동구청 장애인 평생교육 활성화 지원사업<br>
-        울산광역시동구장애인복지관 '나다움 프로젝트' 자조 모임
+        <small style="font-size: 0.65rem;">울산광역시동구장애인복지관 '나다움 프로젝트' 자조모임</small>
       </div>
       <h1>나다움 프로젝트🌳</h1>
       <h2>내 삶의 지혜를 나누는 카드 뉴스</h2>
-      <button class="btn" onclick="showSlide(1)">손주와 그림책 읽을 때 실감나게 읽는 법\n박경화</button>
-      <button class="btn" onclick="showSlide(2)">“첫 도전은 혼자였지만, 다음 비행은\n당신과 함께하고 싶습니다”\n설병화</button>
-      <button class="btn" onclick="showSlide(3)">볼링장 신발 사이즈 제대로 고르는 법\n박춘광</button>
-      <button class="btn" onclick="showSlide(4)">몸에 좋은 계란을 잘 고르고 잘 사는 방법\n황금성</button>
+      <button class="btn" onclick="showSlide(1)">손주와 그림책 읽을 때 실감나게 읽는 법
+박경화</button>
+      <button class="btn" onclick="showSlide(2)">“첫 도전은 혼자였지만, 다음 비행은
+당신과 함께하고 싶습니다”
+설병화</button>
+      <button class="btn" onclick="showSlide(3)">볼링장 신발 사이즈 제대로 고르는 법
+박춘광</button>
+      <button class="btn" onclick="showSlide(4)">몸에 좋은 계란을 잘 고르고 잘 사는 방법
+황금성</button>
     </div>
   </div>
 
@@ -187,11 +204,11 @@
     <div class="slide-title">몸에 좋은 계란을 잘 고르고 잘 사는 방법</div>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="계란 1.png"></div>
-        <div class="swiper-slide"><img src="계란 2.png"></div>
-        <div class="swiper-slide"><img src="계란 3.png"></div>
-        <div class="swiper-slide"><img src="계란 4.png"></div>
-        <div class="swiper-slide"><img src="계란 5.png"></div>
+        <div class="swiper-slide"><img src="유정란 1.png"></div>
+        <div class="swiper-slide"><img src="유정란 2.png"></div>
+        <div class="swiper-slide"><img src="유정란 3.png"></div>
+        <div class="swiper-slide"><img src="유정란 4.png"></div>
+        <div class="swiper-slide"><img src="유정란 5.png"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
